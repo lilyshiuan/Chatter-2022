@@ -1,0 +1,106 @@
+
+.App {
+  background: linear-gradient(90deg, teal, purple);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  height: 4rem;
+  width: 100%;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url("https://cliphttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYrvEfah4uDOgD5aD-EHmy-8026KWGsfZW7A&usqp=CAUardata:image/jpeg;base64,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.com/wp-content/uploads/2018/03/cool-pictures-2018-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.title {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.flexbox-container {
+  display: flex;
+  flex-direction: column
+}
+
+.text1 {
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: black;
+  color: white;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  position: absolute;
+  bottom: 15rem;
+  left: 1.5rem;
+
+}
+
+.text2 {
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: black;
+  color: white;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  bottom: 11rem;
+  left: 1.5rem;
+}
+.text3{
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: black;
+  color: white;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  bottom: 7rem;
+  left: 1.5rem;
+}
+
+.footer {
+  height: 4rem;
+  width: 100%;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+.text-input {
+  width: 100%;
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background: black;
+  color: white;    
+  margin-right: 2rem;
+
+}
+.send {
+  background: white;
+  border-radius: 50%;
+  border: none;
+  height: 1.7rem;
+  width: 1.7rem;
+  position: absolute;
+  right: 3.2rem;
+  cursor: pointer;
+}
