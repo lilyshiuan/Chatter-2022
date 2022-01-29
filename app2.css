@@ -1,0 +1,108 @@
+.App {
+  background: linear-gradient(90deg, orange, rgb(235, 204, 120));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  height: 4rem;
+  width: 100%;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsvxI-cGsF7dSoYBmfQ3ufH76ekG7d9FZTA&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.title {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.flexbox-container {
+  display: flex;
+  flex-direction: column
+}
+
+.text1 {
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: gray;
+  color: whitesmoke;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  bottom: 15rem;
+  left: 1.5rem;
+  border-bottom-left-radius: revert;
+
+
+}
+
+.text2 {
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background:gray;
+  color: whitesmoke;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  bottom: 11rem;
+  left: 1.5rem;
+  border-bottom-left-radius: revert;
+}
+.text3{
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: gray;
+  color: whitesmoke;
+  padding: 0.1rem 1rem;
+  position: absolute;
+  bottom: 7rem;
+  left: 1.5rem;
+  border-bottom-left-radius: revert;
+}
+
+.footer {
+  height: 4rem;
+  width: 100%;
+  border-top: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+.text-input {
+  width: 100%;
+  border: 1px solid white;
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background: gray;
+  color: black;    
+  margin-right: 2rem;
+
+}
+.send {
+  background: white;
+  border-radius: 50%;
+  border: none;
+  height: 1.7rem;
+  width: 1.7rem;
+  position: absolute;
+  right: 3.2rem;
+  cursor: pointer;
+}
