@@ -1,0 +1,53 @@
+
+.App {
+  background: linear-gradient(90deg, orange, rgb(235, 204, 120));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  height: 4rem;
+  width: 100%;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsvxI-cGsF7dSoYBmfQ3ufH76ekG7d9FZTA&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.title {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid white;
+  border-radius: 0.8rem;
+  color: whitesmoke;
+  align-items: flex-start;
+  overflow: auto;
+  max-height: calc(100vh - 4rem - 4rem);
+  min-height: calc(100vh - 4rem - 4rem);
+  padding: 1rem;
+}
+
+.message {
+  color: white;
+  background: gray;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: 0.3rem;
+}

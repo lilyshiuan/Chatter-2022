@@ -21,7 +21,7 @@ function App() {
         <span className="title">Chatter</span>
       </header>
       <div className="texts">
-        {texts.map((msg) => {
+        {messages.map((msg) => {
           return <Message {...msg} />;
         })}
       </div>
