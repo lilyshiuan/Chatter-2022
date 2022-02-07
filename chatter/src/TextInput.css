@@ -9,7 +9,7 @@
     position: relative;
   }
   .text-input {
-    width: 100%;
+    width:calc(100% - 50px);
     border: 1px solid white;
     height: 2rem;
     border-radius: 1rem;
@@ -28,5 +28,14 @@
     position: absolute;
     right: 3.2rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
+  .send:hover {
+    background: black;
+    border: 1px solid white;
+  }
+  .send:hover svg {
+    stroke: white;
+  }
