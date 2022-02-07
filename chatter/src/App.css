@@ -31,16 +31,12 @@
   margin-left: 1rem;
 }
 
-.texts {
+.messages {
   display: flex;
   flex-direction: column-reverse;
-  border: 1px solid white;
-  border-radius: 0.8rem;
-  color: whitesmoke;
   align-items: flex-start;
   overflow: auto;
-  max-height: calc(100vh - 4rem - 4rem);
-  min-height: calc(100vh - 4rem - 4rem);
+  flex: 1;
   padding: 1rem;
 }
 
@@ -50,4 +46,9 @@
   padding: 0.5rem 1rem;
   margin: 0.2rem;
   border-radius: 0.3rem;
+  max-width: 20rem;
+  min-height: auto;
+  overflow-wrap: break-word;
+  position: relative;
+
 }
