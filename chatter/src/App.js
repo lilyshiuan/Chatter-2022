@@ -1,70 +1,77 @@
-import "./App.css";
-import TextInput from "./TextInput";
-import React, { useState } from "react";
-import Message from "./Message";
-import { use100vh } from "react-div-100vh";
-import Camera from "react-snap-pic";
-
-
-// this is a Component call App
-function App() {
-  const [showCamera, setShowCamera] = useState(false)
-  const height = use100vh();
-  // useState creats a magic variable
-  // here its called "messages"
-  // the initial value is an empty array []
-  // "setMessages" is a function that is used to update "messages"
-  let [messages, setMessages] = useState([]);
-
-  // "sendMessage" runs whenver we click the send button
-  function sendMessage(text) {
-    if (!text.trim()) return;
-    // we'll create a new message object
-    const newMessage = {
-      text: text,
-      time: Date.now(),
-      user: "Lily",
-    };
-    // set the "messages" to be a new array
-    // that contains the new message + all the old messages
-    setMessages([newMessage, ...messages]);
-  }
-
-  // every time state changes, React "re-renders"
-  // so this console.log will run again
-  console.log(messages);
-
-  function takePicture(img) {
-    console.log(img)
-    setShowCamera(false)
+.App {
+  background: linear-gradient(90deg, orange, rgb(235, 204, 120));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-  // we return the HTML
-  return (
-    <div
-      className="App"
-      style={{ height: height, minHeight: height, maxHeight: height }}
-    >
-      <header className="header">
-        <div className="logo" />
-        <span className="title">CHATTER!</span>
-      </header>
-      {showCamera && <Camera takePicture={takePicture} />}
-
-      <div className="messages">
-        {messages.map((msg, i) => {
-          // loop over every message in the "messages" array
-          // and return a Message component
-          // we are "spreading" all the items in "msg" into the props
-          // "key" needs to be a unique value for each item
-          return <Message {...msg} key={i} />;
-        })}
-      </div>
-      {/* the sendMessage prop on TextInput = the sendMessage function */}
-      <TextInput sendMessage={sendMessage}
-           showCamera={()=>setShowCamera(true)}
-      />
-    </div>
-  );
+.header {
+  height: 4rem;
+  width: 100%;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqsvxI-cGsF7dSoYBmfQ3ufH76ekG7d9FZTA&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.title {
+  color: white;
+  font-weight: normal;
+  font-size: 2rem;
+  margin-left: 1rem;
 }
 
-export default App;
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  overflow: auto;
+  flex: 1;
+  padding: 1rem;
+}
+
+.message {
+  color: white;
+  background: gray;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem;
+  border-radius: 0.3rem;
+  max-width: 20rem;
+  min-height: auto;
+  overflow-wrap: break-word;
+  position: relative;
+  font-size: 1rem;
+
+}
+.message-user {
+  position: absolute;
+  left: 0;
+  top: -1.5rem;
+  font-size: 1rem;
+}
+
+.name-picker {
+  display: flex;
+  align-items: center;
+  margin-left: 60rem;
+}
+.name-picker svg {
+  stroke: white;
+  cursor: pointer;
+  position: relative;
+  margin-right: 1rem;
+}
+.name-picker-name {
+  color: white;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
